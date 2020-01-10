@@ -1,0 +1,15 @@
+<?php if($this->view->errors): ?>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <?php
+        foreach ($this->view->errors as $error):
+    ?>
+        <i class="fas fa-exclamation"></i>
+        <?= $error; ?>
+        <br>
+    <?php endforeach; ?>
+</div>
+<?php endif;?>
