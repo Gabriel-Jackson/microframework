@@ -2,7 +2,7 @@
     "name": "jck/microframework",
     "description": "Micro Framework MVC",
     "license": "MIT",
-    "type": "project",
+    "type": "composer-plugin",
     "authors": [
         {"name": "Gabriel", "email": "gabriel.christ@tsnetwork.com.br"}
     ],
