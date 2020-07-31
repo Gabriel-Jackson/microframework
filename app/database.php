@@ -1,16 +1,17 @@
-<?php return [
+<?php 
+return [
 
-    
+    "baseModel" => "Illuminate",
     "driver" => "mysql",
     "sqlite" => [
-        "host" => "database.db",
+        "database" => "database.db",
     ],
 
     "mysql" => [
-        "host" => "192.168.0.254",
-        "database" => "curso_microframework",
+        "host" => "localhost",
+        "database" => "microframework",
         "user" => "root",
-        "pass" => "P@ssw0rd",
+        "pass" => "",
         "charset" => "utf8",
         "collation" => "utf8_unicode_ci"
     ]

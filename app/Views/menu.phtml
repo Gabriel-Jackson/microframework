@@ -1,16 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">MicroFramework</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-secondary mb-3">
+  
+  <a class="navbar-brand" href="/"> Microframework</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/posts">Blog</a>
-      </li>
+    
+      <ul class="navbar-nav ml-auto">
+        <?php
+        
+        if(isset($this->view->idUser)){?>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/apartamentos">Apartamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tipos">Tipos</a>
+        </li>
+        <li class="nav-item">
+            <a href="/logout" class="nav-link text-danger">Logout <i class="fas fa-sign-out-alt"></i></a>
+          </li>
+        <?php } else{ 
+          ?>
+          <li class="nav-item">
+             <a href="/login" class="btn btn-outline-success mr-2"> Logar </a>
+          </li>
+          <li class="nav-item">
+            <a href="/register" class="btn btn-outline-light "> 
+             Cadastrar 
+            </a>
+          </li>
+          <?php
+        }?>
+      </ul>
   </div>
 </nav>
